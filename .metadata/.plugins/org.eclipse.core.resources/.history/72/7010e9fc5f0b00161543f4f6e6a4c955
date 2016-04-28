@@ -1,0 +1,15 @@
+
+public class thread extends Thread {
+	int  salary=5000;
+	int   sum=0;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		test.sum=test.sum+salary;
+		System.out.println(Thread.currentThread().getName()+"提交了"+salary);
+		System.out.println("总额："+test.sum);
+	}
+	
+	
+
+}

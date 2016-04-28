@@ -1,0 +1,36 @@
+
+public class consummer extends Thread {
+	volatile  boolean run=true;
+	//public static final Object obj=new Object();
+	@Override
+	public void run() {
+			while(run){
+				try {
+					sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			try {
+				test.fun(false);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				sleep(000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			}
+			
+			
+		//	Thread.currentThread();
+		//	Thread.yield();
+			
+			}
+	}
+	 
+

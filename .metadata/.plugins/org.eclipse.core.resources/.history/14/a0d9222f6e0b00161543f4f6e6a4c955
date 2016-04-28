@@ -1,0 +1,19 @@
+
+public class consummer extends Thread {
+	
+	public static final Object obj=new Object();
+	@Override
+	public void run() {
+			
+			
+			while(test.sum>=0)
+		{
+				test.sum--;
+				System.err.println("生产者生产了一件产品！现在仓库还有"+test.sum+"件产品");
+		}
+			
+			
+			
+	}
+	 
+}

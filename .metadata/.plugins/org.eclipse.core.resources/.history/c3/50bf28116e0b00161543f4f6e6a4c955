@@ -1,0 +1,18 @@
+
+public class test {
+	
+	public static int sum=0;
+	//public static Object obj=new Object();
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread  ywq=new productor();
+		Thread  alex=new productor();
+		ywq.setName("ywq");
+		alex.setName("alex");
+		ywq.start();
+		alex.start();
+		
+	}
+
+}

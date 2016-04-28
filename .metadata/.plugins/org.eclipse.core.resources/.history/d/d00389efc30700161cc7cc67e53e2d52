@@ -1,0 +1,49 @@
+package collection_map;
+
+import java.awt.Robot;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+import javax.sound.midi.Synthesizer;
+
+public class collectiontest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		collectiontest st=new collectiontest();
+		st.testsort();
+	}
+	public void testsort()
+	{
+		List<Integer> integerList =new ArrayList<Integer>();
+		Random random=new Random();
+		Integer k;
+		for(int i=0;i<10;i++){
+		do{
+			k=random.nextInt(100);	
+		}while(integerList.contains(k));
+		integerList.add(k);
+		System.out.println("成功添加整数:"+k);
+		}
+	System.out.println("-------排序前-------");
+	for(Integer integer:integerList)
+	{
+		System.out.println("元素："+integer);
+		
+	}
+	Collections.sort(integerList);
+	System.out.println("-------排序后-------");
+	
+	for(Integer integer:integerList)
+	{
+		System.out.println("元素："+integer);
+		
+	}
+	}
+	
+
+}

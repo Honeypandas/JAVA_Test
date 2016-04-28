@@ -1,0 +1,17 @@
+
+public class test {
+	
+	public static int sum=0;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread  ywq=new thread();
+		Thread  alex=new thread();
+		ywq.setName("ywq");
+		alex.setName("alex");
+		ywq.start();
+		alex.start();
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+
+public class Stage extends Thread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Stage stage=new Stage();
+		stage.start();
+	}
+public void run() {
+	ArmyRunnable  sui=new ArmyRunnable();
+	ArmyRunnable  re=new  ArmyRunnable();
+	
+	Thread  suid=new Thread(sui,"隋军");
+	Thread  red=new Thread(re,"农民起义君");
+	suid.start();
+	red.start();
+	//舞台进程休眠
+	try {
+		Thread.sleep(50);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	System.out.println("正当双方交战正酣！");
+	Thread mrCheng=new KeyPerson();
+	mrCheng.setName("程咬金");
+	System.out.println("程咬金的理想是让百姓安居乐业！");
+	sui.keepRunning=false;
+	re.keepRunning=false;
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	mrCheng.start();
+}
+}

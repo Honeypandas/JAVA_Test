@@ -1,0 +1,47 @@
+package DAO;
+
+import java.awt.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.mysql.jdbc.Connection;
+
+import model.*;
+
+public class goddessDao {
+
+	public void addgoddess() {
+	
+		
+	}
+	public void updategoddess() {
+		
+	}
+	
+	public void  delgoddess() {
+		
+	}
+	public java.util.List<goddess> query(){
+		
+		java.sql.Connection con=JDBCtest.getConnection();
+		java.util.List<goddess> gs=new ArrayList<goddess>();
+		try {
+			java.sql.Statement stmt = con.createStatement();
+			ResultSet rs = stmt
+					.executeQuery("select user_name,age  from ywq_goddess");
+			goddess g=null;
+			while (rs.next()) {
+				g=new goddess();
+				g.setUser_name(rs.getString("user_name"));
+				g.setAge(rs.getInt("age"));
+				
+			//	System.out.println(rs.getString("user_name") + rs.getInt("age"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return gs;
+	}
+}

@@ -1,0 +1,36 @@
+package action;
+
+import java.sql.SQLException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import model.goddess;
+import DAO.goddessDao;
+
+public class goddessaction {
+
+	public static void main(String[] args) throws SQLException {
+		
+		goddessDao g=new goddessDao();
+	 
+		goddess gs=new goddess();
+		gs.setAge(20);
+		gs.setEmail("5454");;
+		gs.setId(3);
+		gs.setMobile("12541542");
+		gs.setUser_name("ywq");
+		gs.setSex(1);
+		Date date=new Date();
+		gs.setBirthday(date);
+		gs.setCreate_date(date);
+		gs.setUpdate_date(date);
+		g.addgoddess(gs);
+		
+	}
+	
+	
+	
+	
+	
+}

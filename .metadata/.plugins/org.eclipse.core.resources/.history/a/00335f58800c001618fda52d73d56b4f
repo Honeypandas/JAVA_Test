@@ -1,0 +1,36 @@
+package DAO;
+
+import java.awt.List;
+import java.sql.ResultSet;
+
+import com.mysql.jdbc.Connection;
+
+import model.*;
+
+public class goddessDao {
+
+	public void addgoddess() {
+		Connection con=JDBCtest.
+		java.sql.Statement stmt = con.createStatement();
+		ResultSet rs = stmt
+				.executeQuery("select user_name,age  from ywq_goddess");
+
+		while (rs.next()) {
+			System.out.println(rs.getString("user_name") + rs.getInt("age"));
+		}
+		
+	}
+	public void updategoddess() {
+		
+	}
+	
+	public void  delgoddess() {
+		
+	}
+	public java.util.List<goddess> query(){
+		
+		return null;
+		
+		
+	}
+}

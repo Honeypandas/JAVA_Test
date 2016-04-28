@@ -1,0 +1,21 @@
+
+public class consummer extends Thread {
+	volatile  boolean run=true;
+	public static final Object obj=new Object();
+	@Override
+	public void run() {
+			while(run){
+	
+
+			test.fun(false);
+	
+			}
+			
+			
+		//	Thread.currentThread();
+		//	Thread.yield();
+			
+			}
+	}
+	 
+}

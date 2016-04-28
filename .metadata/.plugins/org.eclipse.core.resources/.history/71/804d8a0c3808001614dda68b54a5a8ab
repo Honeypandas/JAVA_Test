@@ -1,0 +1,14 @@
+import java.io.File;
+
+
+public class test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileUtils.listDirectory(new File("E:\\"));
+		
+		String s="E:\\ywq.txt";
+		 
+	}
+
+}

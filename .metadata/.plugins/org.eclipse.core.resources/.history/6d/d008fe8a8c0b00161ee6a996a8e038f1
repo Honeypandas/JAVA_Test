@@ -1,0 +1,57 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+
+public class serverThread extends Thread {
+	
+		Socket socket=null;
+		public serverThread(Socket socket)
+		{
+			this.socket=socket;
+		
+		}
+		
+		public void run()
+		{
+			InputStream is;
+			try {
+				is = socket.getInputStream();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			InputStreamReader ist=new InputStreamReader(is);
+			BufferedReader bff=new BufferedReader(ist);
+			String info=null;
+			while((info=bff.readLine())!=null)
+			{
+				System.out.println("我是服务器,客户说:"+info);
+				
+			}
+		 
+			OutputStream os=socket.getOutputStream();
+			PrintWriter pw=new PrintWriter(os);
+			pw.write("欢迎您！");
+			System.err.println("服务器说：欢迎您");
+			pw.flush();
+			socket.shutdownOutput();
+			bff.close();
+			ist.close();
+			is.close();
+			socket.close();
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+	
+}

@@ -1,0 +1,28 @@
+
+public class thread extends Thread {
+	int  salary=5000;
+	public static  int   sum=0;
+	public Object obj=new Object();
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		synchronized (obj) {
+			if(sum!=test.sum)
+				try {
+					obj.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		sum+=salary;
+		test.sum=test.sum+salary;
+		System.out.println(Thread.currentThread().getName()+"提交了"+salary);
+		System.out.println("总额："+test.sum);
+		obj.notify();
+	}
+	
+	
+
+}

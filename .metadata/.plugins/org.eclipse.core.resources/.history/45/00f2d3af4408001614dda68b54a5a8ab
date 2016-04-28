@@ -1,0 +1,22 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+
+public class IOUtil {
+	
+	public static void printHex(String fileName) throws IOException{
+		FileInputStream file =new FileInputStream(fileName);
+		int b;
+		int i=1;
+		while((b=file.read())!=-1)
+		{
+			System.out.println(Integer.toHexString(b)+"");
+			if(i++%10==0){
+			System.out.println("\n");
+		}
+			}
+		file.close();
+	}
+
+}

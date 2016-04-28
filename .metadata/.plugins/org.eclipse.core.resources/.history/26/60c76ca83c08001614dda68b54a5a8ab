@@ -1,0 +1,19 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+
+public class RafDemo {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		int i=10;
+			File file=new File("F:\\ywq.txt");
+			file.createNewFile();
+			RandomAccessFile raf=new RandomAccessFile("ywq.txt", "rw");
+		raf.writeInt(i);
+
+		}
+	
+}

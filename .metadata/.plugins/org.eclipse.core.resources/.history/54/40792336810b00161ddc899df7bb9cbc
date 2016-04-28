@@ -1,0 +1,15 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+public class URLTest {
+
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO Auto-generated method stub
+
+		URL imooc=new URL("http://www.imooc.com");
+		URL url=new URL(imooc,"/index.html?username=tom#test");
+		System.out.println(imooc.getProtocol() +"  "  +url.getAuthority() + url.getPort() );
+	}
+
+}

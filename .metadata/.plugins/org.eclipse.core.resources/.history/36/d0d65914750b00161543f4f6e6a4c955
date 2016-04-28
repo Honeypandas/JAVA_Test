@@ -1,0 +1,47 @@
+
+public class productor extends Thread {
+	 
+	volatile  boolean run=true;
+	//public final Object obj=new Object();
+	@Override
+	public void run() 
+	{
+		// TODO Auto-generated method stub
+		
+		while(run)
+		{
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+			try {
+				test.fun(true);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			try {
+				sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		}
+		
+		
+		//Thread.currentThread();
+		//Thread.yield();
+		
+		}
+		
+	}
+	
+	
+
+

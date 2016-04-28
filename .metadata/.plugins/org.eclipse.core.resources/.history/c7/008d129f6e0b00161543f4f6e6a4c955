@@ -1,0 +1,24 @@
+
+public class productor extends Thread {
+	 
+	public final Object obj=new Object();
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		while(test.sum<=100)
+		{
+			test.sum++;
+			System.err.println("生产者生产了一件产品！现在仓库还有"+test.sum+"件产品");
+			Thread.currentThread();
+			Thread.yield();
+		}
+		
+		
+		
+		
+	}
+	
+	
+
+}

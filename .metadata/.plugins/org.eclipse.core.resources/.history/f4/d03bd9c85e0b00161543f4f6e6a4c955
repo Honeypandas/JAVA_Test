@@ -1,0 +1,15 @@
+
+public class test {
+	
+	public static int sum=0;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread  ywq=new Thread("ywq");
+		Thread  alex=new Thread("alex");
+		ywq.start();
+		alex.start();
+		
+	}
+
+}

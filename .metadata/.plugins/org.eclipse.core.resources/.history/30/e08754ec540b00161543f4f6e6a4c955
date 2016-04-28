@@ -1,0 +1,26 @@
+
+public class Stage extends Thread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+public void run() {
+	ArmyRunnable  sui=new ArmyRunnable();
+	ArmyRunnable  re=new  ArmyRunnable();
+	
+	Thread  suid=new Thread(sui,"隋军");
+	Thread  red=new Thread(re,"隋军");
+	suid.start();
+	red.start();
+	//舞台进程休眠
+	try {
+		Thread.sleep(50);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	sui.keepRunning=false;
+	re.keepRunning=false;
+}
+}

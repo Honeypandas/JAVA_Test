@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+import javax.sound.sampled.Port;
+
+
+public class UDPclient {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		InetAddress address=InetAddress.getByName("localhost");
+		byte[] data="”√ªß√˚:admin;√‹¬Î:123".getBytes();
+		int port=8800;
+		DatagramPacket packet=new DatagramPacket(data, data.length,address,port);
+		
+		DatagramSocket socket=new DatagramSocket();
+		socket.send(packet);
+			
+		
+	}
+
+}

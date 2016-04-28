@@ -1,0 +1,28 @@
+
+public class productor extends Thread {
+	 
+	volatile  boolean run=true;
+	public final Object obj=new Object();
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		while(run){
+		
+		
+		
+			test.fun(true);
+		
+		}
+		
+		
+		//Thread.currentThread();
+		//Thread.yield();
+		
+		}
+		
+	}
+	
+	
+
+}
