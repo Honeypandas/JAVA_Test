@@ -17,17 +17,17 @@ public class goddessDao {
 		java.sql.Connection con=JDBCtest.getConnection();
 		String sql=""+"insert into ywq_goddess"+"(user_name,sex,age,birthday,email,mobile,"
 			+"create_user,create_date,update_user,update_date,isdel)"+
-				"values("+"?,?,?,current_date(),?,?,?,current_date(),?,current_date(),?)";
+				"values("+"?,'1',?,current_date(),?,?,'ywq',current_date(),'ywq',current_date(),11)";
 		java.sql.PreparedStatement ptmt=con.prepareStatement(sql);
 		
 		ptmt.setString(1, g.getUser_name());
-		ptmt.setInt(2,g.getSex());
-		ptmt.setInt(3, g.getAge());; 
-		ptmt.setString(4, g.getEmail());
-		ptmt.setString(5 ,g.getMobile());
-		ptmt.setString(6, g.getCreate_user());
-		ptmt.setString(7, g.getUser_name());
-		ptmt.setInt(8, g.getIsdel());
+		//ptmt.setInt(2,g.getSex());
+		ptmt.setInt(2, g.getAge());; 
+		ptmt.setString(3, g.getEmail());
+		ptmt.setString(4 ,g.getMobile());
+		//ptmt.setString(6, g.getCreate_user());
+		//ptmt.setString(7, g.getUser_name());
+		//ptmt.setInt(8, g.getIsdel());
 		
 		ptmt.execute();
 	

@@ -10,6 +10,32 @@ import DAO.goddessDao;
 
 public class goddessaction {
 
+	
+	public void add(goddess gs) throws SQLException {
+	goddessDao dao=new goddessDao();
+	dao.addgoddess(gs);
+}
+	
+	public void del(Integer id) throws SQLException {
+		goddessDao dao=new goddessDao();
+		dao.delgoddess(id);
+	}
+	
+	public void  get(Integer id) throws SQLException {
+		goddessDao dao=new goddessDao();
+		dao.getone(id);
+		
+	}
+	public void  updete(goddess g) throws SQLException {
+		goddessDao dao=new goddessDao();
+		dao.updategoddess(g);
+	}
+	
+	public List<goddess> query() {
+		
+	goddessDao dao=new goddessDao();
+	return dao.query();
+	}	
 	public static void main(String[] args) throws SQLException {
 		
 		goddessDao g=new goddessDao();

@@ -1,0 +1,22 @@
+package ywq;
+
+public class Ywq {
+
+	private String name;
+	private int age;
+	public static void main(String[] args) {
+		 Ywq ywq=new Ywq();
+		 ywq.show();
+
+	}
+
+	public void  print() {
+		System.out.println("HelloWorld!");
+	}
+	public void show(){
+		
+		System.out.println("Reflection!");
+	}
+	
+	
+}

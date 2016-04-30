@@ -39,6 +39,7 @@ public class JDBCtest {
 		Class.forName("com.mysql.jdbc.Driver");
 		java.sql.Connection con = DriverManager.getConnection(URL, USER,
 				PASSWORD);
+		
 		java.sql.Statement stmt = con.createStatement();
 		ResultSet rs = stmt
 				.executeQuery("select user_name,age  from ywq_goddess");

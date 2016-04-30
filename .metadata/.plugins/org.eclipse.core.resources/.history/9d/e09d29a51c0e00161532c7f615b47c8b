@@ -1,0 +1,28 @@
+package ywq;
+
+import java.lang.reflect.Method;
+
+public class Ywq {
+
+	private String name;
+	private int age;
+	public static void main(String[] args) throws ClassNotFoundException {
+		 Ywq ywq=new Ywq();
+		 ywq.show();
+		 
+		Class c= Class.forName("Ywq.class");
+		 Method[] m=c.getMethods();
+		System.out.println(m.length);
+		 
+	}
+
+	public void  print() {
+		System.out.println("HelloWorld!");
+	}
+	public void show(){
+		
+		System.out.println("Reflection!");
+	}
+	
+	
+}
